@@ -39,8 +39,8 @@ export PGDATABASE=pycon
 # Créer le user test
 psql -c "INSERT INTO public.user (name) VALUES ('Katharina BERARDA');"
 # Petit alias pour y voir plus clair
-alias query_tables='psql -c "SELECT * FROM alembic_version; SELECT * FROM alembic_version_after; SELECT * FROM public.user;"'
-alias query_tables_2='psql -c "SELECT * FROM alembic_version; SELECT * FROM alembic_version_after; SELECT * FROM public.user; SELECT * FROM public.user_comment;"'
+alias query_tables='psql -c "SELECT * FROM alembic_version"; psql -c "SELECT * FROM alembic_version_after"; psql -c "SELECT * FROM public.user;"'
+alias query_tables_2='psql -c "SELECT * FROM alembic_version"; psql -c "SELECT * FROM alembic_version_after"; psql -c "SELECT * FROM public.user"; psql -c "SELECT * FROM public.user_comment;"'
 ```
 
 ### Migrer le schéma sans downtime
